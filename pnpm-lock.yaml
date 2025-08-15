@@ -126,7 +126,7 @@ importers:
         version: 19.1.0(react@19.0.0)
       super-app-showcase-sdk:
         specifier: 0.0.2
-        version: link:../sdk
+        version: 0.0.2
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -148,6 +148,9 @@ importers:
       '@react-navigation/native-stack':
         specifier: 7.2.0
         version: 7.2.0(@react-navigation/native@7.0.14(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0))(react-native-safe-area-context@5.3.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0))(react-native-screens@4.10.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0))(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
+      '@zeohera1011/super-app-showcase-sdk':
+        specifier: workspace:^
+        version: link:../sdk
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -356,7 +359,7 @@ importers:
         version: 19.1.0(react@19.0.0)
       super-app-showcase-sdk:
         specifier: 0.0.2
-        version: link:../sdk
+        version: 0.0.2
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -474,7 +477,7 @@ importers:
         version: 19.1.0(react@19.0.0)
       super-app-showcase-sdk:
         specifier: 0.0.2
-        version: link:../sdk
+        version: 0.0.2
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -588,7 +591,7 @@ importers:
         version: 19.1.0(react@19.0.0)
       super-app-showcase-sdk:
         specifier: 0.0.2
-        version: link:../sdk
+        version: 0.0.2
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -5239,6 +5242,9 @@ packages:
   sudo-prompt@9.2.1:
     resolution: {integrity: sha512-Mu7R0g4ig9TUuGSxJavny5Rv0egCEtpZRNMrZaYS1vxkiIxGiGUwoezU3LazIQ+KE04hTrTfNPgxU5gzi7F5Pw==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+  super-app-showcase-sdk@0.0.2:
+    resolution: {integrity: sha512-fPsYst6BMqC1gYH30DIEr9cj2JqPL4AZr67OWgAB21+cb83Y86sf9mPmCy9XvYAQ47wBjQVSPYdYsuhZf+w7oQ==}
 
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -11577,6 +11583,8 @@ snapshots:
   strnum@1.0.5: {}
 
   sudo-prompt@9.2.1: {}
+
+  super-app-showcase-sdk@0.0.2: {}
 
   supports-color@5.5.0:
     dependencies:

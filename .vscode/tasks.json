@@ -1,0 +1,584 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "pnpm install",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Pods (iOS)",
+      "type": "shell",
+      "command": "pnpm pods",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Pods (iOS) Update",
+      "type": "shell",
+      "command": "pnpm pods:update",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Host DevServer",
+      "type": "shell",
+      "command": "pnpm --filter host start",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Auth DevServer",
+      "type": "shell",
+      "command": "pnpm --filter auth start",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Booking DevServer",
+      "type": "shell",
+      "command": "pnpm --filter booking start",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dashboard DevServer",
+      "type": "shell",
+      "command": "pnpm --filter dashboard start",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Shopping DevServer",
+      "type": "shell",
+      "command": "pnpm --filter shopping start",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Host DevServer [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter host start --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Auth DevServer [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter auth start --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Booking DevServer [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter booking start --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dashboard DevServer [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter dashboard start --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Shopping DevServer [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter shopping start --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Host DevServer [Android]",
+      "type": "shell",
+      "command": "pnpm --filter host start --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Auth DevServer [Android]",
+      "type": "shell",
+      "command": "pnpm --filter auth start --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Booking DevServer [Android]",
+      "type": "shell",
+      "command": "pnpm --filter booking start --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dashboard DevServer [Android]",
+      "type": "shell",
+      "command": "pnpm --filter dashboard start --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Shopping DevServer [Android]",
+      "type": "shell",
+      "command": "pnpm --filter shopping start --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dev Servers (All)",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Host DevServer",
+        "Start Auth DevServer",
+        "Start Booking DevServer",
+        "Start Dashboard DevServer",
+        "Start Shopping DevServer"
+      ]
+    },
+    {
+      "label": "Start Dev Servers (All) [iOS]",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Host DevServer [iOS]",
+        "Start Auth DevServer [iOS]",
+        "Start Booking DevServer [iOS]",
+        "Start Dashboard DevServer [iOS]",
+        "Start Shopping DevServer [iOS]"
+      ]
+    },
+    {
+      "label": "Start Dev Servers (All) [Android]",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Host DevServer [Android]",
+        "Start Auth DevServer [Android]",
+        "Start Booking DevServer [Android]",
+        "Start Dashboard DevServer [Android]",
+        "Start Shopping DevServer [Android]"
+      ]
+    },
+    {
+      "label": "Run Host iOS",
+      "type": "shell",
+      "command": "pnpm run:host:ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Run Host Android",
+      "type": "shell",
+      "command": "pnpm run:host:android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Super App (iOS)",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Dev Servers (All) [iOS]",
+        "Run Host iOS"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Start Super App (Android)",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Dev Servers (All) [Android]",
+        "Run Host Android"
+      ],
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "label": "Start Dashboard DevServer (Standalone)",
+      "type": "shell",
+      "command": "pnpm --filter dashboard start:standalone",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dashboard DevServer (Standalone) [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter dashboard start:standalone --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dashboard DevServer (Standalone) [Android]",
+      "type": "shell",
+      "command": "pnpm --filter dashboard start:standalone --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Dashboard (iOS, Standalone)",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Auth DevServer [iOS]",
+        "Start Dashboard DevServer (Standalone) [iOS]",
+        "Run Dashboard iOS"
+      ]
+    },
+    {
+      "label": "Start Dashboard (Android, Standalone)",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Auth DevServer [Android]",
+        "Start Dashboard DevServer (Standalone) [Android]",
+        "Run Dashboard Android"
+      ]
+    },
+    {
+      "label": "Run Dashboard iOS",
+      "type": "shell",
+      "command": "pnpm run:dashboard:ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Run Dashboard Android",
+      "type": "shell",
+      "command": "pnpm run:dashboard:android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Test (all apps)",
+      "type": "shell",
+      "command": "pnpm test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Lint (all apps)",
+      "type": "shell",
+      "command": "pnpm lint",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Typecheck (all apps)",
+      "type": "shell",
+      "command": "pnpm typecheck",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Align Dependencies",
+      "type": "shell",
+      "command": "pnpm align-deps",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Check Dependencies",
+      "type": "shell",
+      "command": "pnpm check-deps",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "First-time Setup (iOS)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Install Dependencies",
+        "Pods (iOS)"
+      ],
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "label": "First-time Setup (Android)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Install Dependencies"
+      ],
+      "group": {
+        "kind": "build"
+      }
+    }
+  ]
+}

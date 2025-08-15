@@ -1,10 +1,10 @@
 {
-  "name": "super-app-showcase-sdk",
+  "name": "@zeohera1011/super-app-showcase-sdk",
   "version": "0.0.2",
   "description": "Dependency management & utils for the Super App Showcase",
   "license": "MIT",
-  "homepage": "https://github.com/callstack/super-app-showcase",
-  "repository": "github:callstack/super-app-showcase",
+  "homepage": "https://github.com/ElzaSandaro11/super-app-showcase",
+  "repository": "github:ElzaSandaro11/super-app-showcase",
   "main": "index.js",
   "files": [
     "android",

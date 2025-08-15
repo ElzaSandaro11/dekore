@@ -1,39 +1,32 @@
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import { fileURLToPath } from 'node:url';
 import * as Repack from '@callstack/repack';
 import rspack from '@rspack/core';
-import {getSharedDependencies} from 'super-app-showcase-sdk';
+import pkg from 'super-app-showcase-sdk';
+
+const { getSharedDependencies, dependencies } = pkg; // expect semver strings here
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/**
- * Rspack configuration enhanced with Re.Pack defaults for React Native.
- *
- * Learn about Rspack configuration: https://rspack.dev/config/
- * Learn about Re.Pack configuration: https://re-pack.dev/docs/guides/configuration
- */
+// Set this when running under the Host to avoid bundling fallbacks.
+// Example: AS_REMOTE=1 pnpm start
+const AS_REMOTE = process.env.AS_REMOTE === '1';
 
-export default env => {
-  const {mode, platform} = env;
+export default (env) => {
+  const { mode, platform } = env;
 
   return {
     mode,
     context: __dirname,
     entry: './index.js',
-    experiments: {
-      incremental: mode === 'development',
-    },
-    resolve: {
-      ...Repack.getResolveOptions(),
-    },
-    output: {
-      uniqueName: 'sas-booking',
-    },
+    experiments: { incremental: mode === 'development' },
+    resolve: { ...Repack.getResolveOptions() },
+    output: { uniqueName: 'sas-booking' },
     module: {
       rules: [
         ...Repack.getJsTransformRules(),
-        ...Repack.getAssetTransformRules({inline: true}),
+        ...Repack.getAssetTransformRules({ inline: true }),
       ],
     },
     plugins: [
@@ -49,16 +42,21 @@ export default env => {
         remotes: {
           auth: `auth@http://localhost:9003/${platform}/mf-manifest.json`,
         },
-        shared: getSharedDependencies({eager: false}),
+        shared: {
+          ...getSharedDependencies({ eager: false }),
+          'react-native': {
+            eager: true,
+            singleton: true,
+            requiredVersion: dependencies['react-native'].version,
+            import: AS_REMOTE ? false : undefined,
+          },
+        },
       }),
       new Repack.plugins.CodeSigningPlugin({
         enabled: mode === 'production',
         privateKeyPath: path.join('..', '..', 'code-signing.pem'),
       }),
-      // silence missing @react-native-masked-view optionally required by @react-navigation/elements
-      new rspack.IgnorePlugin({
-        resourceRegExp: /^@react-native-masked-view/,
-      }),
+      new rspack.IgnorePlugin({ resourceRegExp: /^@react-native-masked-view/ }),
     ],
   };
 };

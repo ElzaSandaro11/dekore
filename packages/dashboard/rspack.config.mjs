@@ -1,8 +1,10 @@
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import { fileURLToPath } from 'node:url';
 import * as Repack from '@callstack/repack';
 import rspack from '@rspack/core';
-import {getSharedDependencies} from 'super-app-showcase-sdk';
+import pkg from 'super-app-showcase-sdk';
+
+const { getSharedDependencies, dependencies } = pkg;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,9 +17,10 @@ const STANDALONE = Boolean(process.env.STANDALONE);
  * Learn about Rspack configuration: https://rspack.dev/config/
  * Learn about Re.Pack configuration: https://re-pack.dev/docs/guides/configuration
  */
+const AS_REMOTE = process.env.AS_REMOTE === '1';
 
 export default env => {
-  const {mode, platform} = env;
+  const { mode, platform } = env;
 
   return {
     mode,
@@ -35,7 +38,7 @@ export default env => {
     module: {
       rules: [
         ...Repack.getJsTransformRules(),
-        ...Repack.getAssetTransformRules({inline: !STANDALONE}),
+        ...Repack.getAssetTransformRules({ inline: !STANDALONE }),
       ],
     },
     plugins: [
@@ -46,11 +49,19 @@ export default env => {
         dts: false,
         exposes: STANDALONE
           ? undefined
-          : {'./App': './src/navigation/MainNavigator'},
+          : { './App': './src/navigation/MainNavigator' },
         remotes: {
           auth: `auth@http://localhost:9003/${platform}/mf-manifest.json`,
         },
-        shared: getSharedDependencies({eager: STANDALONE}),
+        shared: {
+          ...getSharedDependencies({ eager: false }),
+          'react-native': {
+            eager: true,
+            singleton: true,
+            requiredVersion: dependencies['react-native'].version,
+            import: AS_REMOTE ? false : undefined,
+          },
+        },
       }),
       new Repack.plugins.CodeSigningPlugin({
         enabled: mode === 'production',
