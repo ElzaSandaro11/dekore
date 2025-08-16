@@ -290,6 +290,54 @@
       }
     },
     {
+      "label": "Start Shell DevServer",
+      "type": "shell",
+      "command": "pnpm --filter shell start",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Shell DevServer [iOS]",
+      "type": "shell",
+      "command": "pnpm --filter shell start --platform ios",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Start Shell DevServer [Android]",
+      "type": "shell",
+      "command": "pnpm --filter shell start --platform android",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
       "label": "Start Dev Servers (All)",
       "dependsOrder": "parallel",
       "dependsOn": [
@@ -297,7 +345,8 @@
         "Start Auth DevServer",
         "Start Booking DevServer",
         "Start Dashboard DevServer",
-        "Start Shopping DevServer"
+        "Start Shopping DevServer",
+        "Start Shell DevServer"
       ]
     },
     {
@@ -308,7 +357,8 @@
         "Start Auth DevServer [iOS]",
         "Start Booking DevServer [iOS]",
         "Start Dashboard DevServer [iOS]",
-        "Start Shopping DevServer [iOS]"
+        "Start Shopping DevServer [iOS]",
+        "Start Shell DevServer [iOS]"
       ]
     },
     {
@@ -319,7 +369,8 @@
         "Start Auth DevServer [Android]",
         "Start Booking DevServer [Android]",
         "Start Dashboard DevServer [Android]",
-        "Start Shopping DevServer [Android]"
+        "Start Shopping DevServer [Android]",
+        "Start Shell DevServer [Android]"
       ]
     },
     {

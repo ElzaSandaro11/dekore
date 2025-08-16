@@ -1,8 +1,10 @@
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import { fileURLToPath } from 'node:url';
 import * as Repack from '@callstack/repack';
 import rspack from '@rspack/core';
-import {getSharedDependencies} from 'super-app-showcase-sdk';
+import pkg from 'super-app-showcase-sdk';
+
+const { getSharedDependencies, dependencies } = pkg;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,7 +17,7 @@ const __dirname = path.dirname(__filename);
  */
 
 export default env => {
-  const {mode, platform = process.env.PLATFORM} = env;
+  const { mode, platform = process.env.PLATFORM } = env;
 
   return {
     mode,
@@ -46,9 +48,23 @@ export default env => {
           shopping: `shopping@http://localhost:9001/${platform}/mf-manifest.json`,
           dashboard: `dashboard@http://localhost:9002/${platform}/mf-manifest.json`,
           auth: `auth@http://localhost:9003/${platform}/mf-manifest.json`,
-          news: `news@http://localhost:9004/${platform}/mf-manifest.json`,
+          shell: `shell@http://localhost:9004/${platform}/mf-manifest.json`,
         },
-        shared: getSharedDependencies({eager: true}),
+        shared: {
+          ...getSharedDependencies({ eager: true }),
+          '@react-navigation/native-stack': {
+            singleton: true,
+            requiredVersion: dependencies['@react-navigation/native-stack'].version,
+          },
+          '@react-navigation/native': {
+            singleton: true,
+            requiredVersion: dependencies['@react-navigation/native'].version,
+          },
+          'react-native-screens': {
+            singleton: true,
+            requiredVersion: dependencies['react-native-screens'].version,
+          },
+        },
       }),
       // silence missing @react-native-masked-view optionally required by @react-navigation/elements
       new rspack.IgnorePlugin({
