@@ -4,26 +4,27 @@ import BookingScreen from '../screens/BookingScreen';
 import TabsNavigator from './TabsNavigator';
 import ShoppingScreen from '../screens/ShoppingScreen';
 import DashboardScreen from '../screens/DashboardScreen';
-// import {Text} from 'react-native';
 
-export type MainStackParamList = {
+export type ShellStackParamList = {
   Tabs: undefined;
   Booking: undefined;
   Shopping: undefined;
   Dashboard: undefined;
 };
 
-const Main = createNativeStackNavigator<MainStackParamList>();
+const Shell = createNativeStackNavigator<ShellStackParamList>();
 
-const MainNavigator = () => {
-  return (
-    <Main.Navigator screenOptions={{headerShown: false}}>
-      <Main.Screen name="Tabs" component={TabsNavigator} />
-      <Main.Screen name="Booking" component={BookingScreen} />
-      <Main.Screen name="Shopping" component={ShoppingScreen} />
-      <Main.Screen name="Dashboard" component={DashboardScreen} />
-    </Main.Navigator>
+const ShellNavigator = () => {
+return (
+    <>
+      <Shell.Navigator screenOptions={{headerShown: false}}>
+        <Shell.Screen name="Tabs" component={TabsNavigator} />
+        <Shell.Screen name="Booking" component={BookingScreen} />
+        <Shell.Screen name="Shopping" component={ShoppingScreen} />
+        <Shell.Screen name="Dashboard" component={DashboardScreen} />
+      </Shell.Navigator>
+    </>
   );
 };
 
-export default MainNavigator;
+export default ShellNavigator;

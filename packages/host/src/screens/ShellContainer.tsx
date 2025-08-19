@@ -2,13 +2,13 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Placeholder from '../components/Placeholder';
 
-const News = React.lazy(() => import('shell/App'));
+const Shell = React.lazy(() => import('shell/App'));
 
 const ShellContainer = () => {
   return (
     <ErrorBoundary name="ShellContainer">
       <React.Suspense fallback={<Placeholder label="Dekore" icon="circle" />}>
-        <News />
+        <Shell />
       </React.Suspense>
     </ErrorBoundary>
   );
