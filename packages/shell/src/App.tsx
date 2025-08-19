@@ -30,12 +30,7 @@ const App = () => {
                 );
               }
               // return <Text>Hello</Text>;
-              return (
-                <NavigationContainer
-                  onReady={() => RNBootSplash.hide({fade: true})}>
-                  <MainNavigator />
-                </NavigationContainer>
-              );
+              return <MainNavigator />;
             }}
           </AuthProvider>
         </React.Suspense>

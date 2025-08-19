@@ -52,18 +52,6 @@ export default env => {
         },
         shared: {
           ...getSharedDependencies({ eager: true }),
-          '@react-navigation/native-stack': {
-            singleton: true,
-            requiredVersion: dependencies['@react-navigation/native-stack'].version,
-          },
-          '@react-navigation/native': {
-            singleton: true,
-            requiredVersion: dependencies['@react-navigation/native'].version,
-          },
-          'react-native-screens': {
-            singleton: true,
-            requiredVersion: dependencies['react-native-screens'].version,
-          },
         },
       }),
       // silence missing @react-native-masked-view optionally required by @react-navigation/elements
